@@ -1,0 +1,10 @@
+.sign{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    width: 960px;
+    font-family: 'Righteous', cursive;
+    border: solid rgb(153, 90, 211) 1rem;
+}
