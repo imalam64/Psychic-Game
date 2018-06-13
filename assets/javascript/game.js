@@ -15,7 +15,7 @@ var letterToGuess = null;
 //selects a random value from the array
 var compGuess = compOptions[Math.floor(Math.random() * compOptions.length)];
 
-
+//creates a function to show remaining guesses
 var updateGuessesLeft = function() {
 document.getElementById('guessLeft').innerHTML = "Guesses Left: " + guessesLeft;
 };
@@ -28,7 +28,8 @@ this.letterToGuess = this.compOptions[Math.floor(Math.random() * this.compOption
 var updateGuessDone = function() {
 document.getElementById('progress').innerHTML = "You've guessed so far: " + guessedLetters.join(', ');
 };
-  
+
+//creates a reset function when the game round has ended
 var reset = function() {
     totalGuesses = 9;
     guessesLeft = 9;
@@ -41,7 +42,8 @@ var reset = function() {
   
   updateLetterToGuess();
   updateGuessesLeft();
-  
+
+// waits for user input to start the game and provides alert to them and reset the round
 document.onkeyup = function(event) {
       guessesLeft--;
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
